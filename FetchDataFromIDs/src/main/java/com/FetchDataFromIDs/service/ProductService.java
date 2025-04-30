@@ -38,6 +38,7 @@ public class ProductService {
 		if(ids==null||ids.isEmpty()) return Collections.emptyList();
 		List<Integer>limit =ids.stream().distinct().limit(100).collect(Collectors.toList());
 		return prodRepo.findByIdIn(limit, projection);
+	
 		
 	}
 }
